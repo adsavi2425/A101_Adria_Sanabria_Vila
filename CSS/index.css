@@ -1,0 +1,222 @@
+@font-face {
+    font-family: "doto1";
+    src: url(../FONT/Doto-VariableFont_ROND\,wght.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #000000;
+    margin-top: 80px; /* Ajusta este valor para compensar la altura del header */
+    background-image: url('../IMG/fondo3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    font-family: "doto1";
+    background-color: rgba(125, 125, 123, 0.9); /* Fondo semitransparente */
+    color: white;
+    text-align: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra más suave */
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 30px; /* Bordes más redondeados */
+    z-index: 1000;
+    width: 80%; /* Aumenta el ancho del header */
+    max-width: 1200px; /* Ancho máximo */
+    backdrop-filter: blur(8px); /* Fondo borroso */
+}
+
+.banner h1 {
+    font-size: 2.5rem; /* Tamaño de fuente más grande */
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+    letter-spacing: 2px; /* Espaciado entre letras */
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 0.5rem;
+}
+
+nav ul li {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav ul li:hover {
+    transform: scale(1.1);
+    color: #ffd700; /* Color dorado al hacer hover */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Cambia el color del enlace en hover */
+}
+
+.intro, .catalogue, .services, .contact {
+    padding: 2rem;
+    text-align: center;
+    
+}
+
+h2 {
+    margin-top: 1.3rem;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.catalogue .car {
+    display: inline-block;
+    width: 25%;
+    padding: 1rem;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2);
+    margin: 1rem;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 20px;
+}
+
+
+#tit{
+    padding-top: 5%;
+    text-align: center;
+    font-size: 2.5rem;
+}
+.catalogue .car img {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover;
+    border-radius: 8px;
+}
+ 
+.catalogue .car h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.catalogue .car p {
+    font-size: 1rem;
+    color: #555;
+}
+
+
+.car:hover {
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.1);
+    transition: 1s;
+    
+}
+.services ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services ul li {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+/* Ajuste para pantallas medianas */
+@media (max-width: 1024px) {
+    header {
+        width: 90%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .contact-card, .banner h1 {
+        font-size: 1.8rem;
+    }
+    
+    nav ul {
+        gap: 1rem;
+    }
+
+    .catalogue .car {
+        width: 45%; /* Reduce el tamaño de los elementos de catálogo */
+    }
+}
+
+/* Ajuste para pantallas pequeñas (tabletas y móviles) */
+@media (max-width: 768px) {
+    header {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .contact-card, .banner h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .catalogue .car {
+        width: 100%; /* Ocupa el 100% del ancho en móviles */
+        margin: 0.5rem 0;
+    }
+    
+    .btn {
+        width: 100%; /* Botón ancho completo */
+        padding: 0.6rem;
+    }
+}
+
+/* Ajuste para pantallas extra pequeñas (móviles) */
+@media (max-width: 480px) {
+    .banner h1 {
+        font-size: 1.2rem;
+    }
+
+    .contact-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-group label, .form-group input, .form-group textarea, .btn {
+        font-size: 1rem;
+    }
+
+    .contact-card {
+        padding: 1rem;
+    }
+
+    #messageStatus {
+        font-size: 1rem;
+    }
+}
+
